@@ -1,4 +1,3 @@
-// src/components/layout/Navigation.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -23,7 +22,6 @@ const Navigation = () => {
             <>
               <Link to="/dashboard" className="hover:text-gray-300">Dashboard</Link>
               
-              {/* Admin and Moderator links */}
               {(isAdmin || isModerator) && (
                 <>
                   <Link to="/boards" className="hover:text-gray-300">Boards</Link>
@@ -31,7 +29,6 @@ const Navigation = () => {
                 </>
               )}
               
-              {/* Admin only links */}
               {isAdmin && (
                 <Link to="/admin" className="hover:text-gray-300">Admin Panel</Link>
               )}

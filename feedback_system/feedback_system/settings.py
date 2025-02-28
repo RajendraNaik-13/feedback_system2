@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken', 
     'corsheaders',  
-    'accounts',  # Your custom user model app
+    'accounts',  
 ]
 
 
@@ -80,10 +80,8 @@ WSGI_APPLICATION = 'feedback_system.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  
 ]
-# Add these at the top of your settings.py
 
 
-# Replace the DATABASES section of your settings.py with this
 tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
 
 DATABASES = {

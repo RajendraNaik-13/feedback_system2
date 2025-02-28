@@ -17,7 +17,6 @@ class RegisterView(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         
-        # Create token for the user
         token, created = Token.objects.get_or_create(user=user)
         
         return Response({
@@ -50,7 +49,6 @@ class LoginView(APIView):
 
 class LogoutView(APIView):
     def post(self, request, *args, **kwargs):
-        # Delete the token to logout
         Token.objects.filter(user=request.user).delete()
         logout(request)
         return Response(status=status.HTTP_204_NO_CONTENT)

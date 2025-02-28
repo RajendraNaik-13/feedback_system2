@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -17,10 +16,8 @@ export const AuthProvider = ({ children }) => {
   
   const navigate = useNavigate();
 
-  // Set up axios defaults
   axios.defaults.baseURL = 'http://localhost:8000/api';
   
-  // Add token to all requests
   useEffect(() => {
     if (token) {
       axios.defaults.headers.common['Authorization'] = `Token ${token}`;
@@ -31,7 +28,6 @@ export const AuthProvider = ({ children }) => {
     }
   }, [token]);
 
-  // Check if user is already logged in
   useEffect(() => {
     const verifyToken = async () => {
       if (!token) {
@@ -106,7 +102,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Update user profile
   const updateProfile = async (userData) => {
     try {
       const response = await axios.patch('/auth/me/', userData);

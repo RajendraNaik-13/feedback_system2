@@ -15,14 +15,12 @@ const Dashboard = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Card for everyone */}
         <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-semibold mb-2">Your Profile</h3>
           <p className="text-gray-600 mb-4">View and edit your personal information</p>
           <a href="/profile" className="text-blue-500 hover:underline">Go to Profile →</a>
         </div>
 
-        {/* Cards for moderators and admins */}
         {(isModerator || isAdmin) && (
           <>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
@@ -39,7 +37,6 @@ const Dashboard = () => {
           </>
         )}
 
-        {/* Card for admins only */}
         {isAdmin && (
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <h3 className="text-lg font-semibold mb-2">Admin Panel</h3>
