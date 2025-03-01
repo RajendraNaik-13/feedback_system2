@@ -1,4 +1,3 @@
-# accounts/views.py
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -6,7 +5,7 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer, TokenSerializer
 
-User = get_user_model()
+
 
 class RegisterView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]

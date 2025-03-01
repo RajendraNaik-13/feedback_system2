@@ -7,10 +7,11 @@ import RegisterForm from './components/auth/RegisterForm';
 import ProfilePage from './components/auth/ProfilePage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Dashboard from './components/dashboard/Dashboard';
-
+import BoardsList from './components/boards/BoardsList';
+import FeedbackList from './components/feedback/FeedbackList';
 const AdminPanel = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Admin Panel</h1></div>;
-const BoardsList = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Boards List</h1></div>;
-const FeedbackList = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Feedback List</h1></div>;
+//const BoardsList = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Boards List</h1></div>;
+//const FeedbackList = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Feedback List</h1></div>;
 const HomePage = () => <div className="container mx-auto p-4"><h1 className="text-2xl font-bold">Welcome to Feedback Management System</h1></div>;
 
 const App = () => {
